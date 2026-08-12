@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(12, 1, 12);
+
+            
+        }
+        .container{
+            width: 450px;
+            height: 550px;
+            margin: 100px auto 10px;
+            position: relative;
+            
+            padding-top: 40px;
+            
+            
+            
+            }
+            .ship{
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                background-image: linear-gradient(rgb(13, 13, 86),blue);
+                position: absolute;
+                top: 0;
+                left: 0;
+                filter: blur(2px);
+                box-shadow: 0 0 80px rgb(23, 4, 93);
+                animation: around 4s ease-in-out 2s infinite alternate;
+
+
+
+            }
+            .shit{
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                background-image: linear-gradient(to right,  rgb(243, 70, 7), rgb(255, 25, 0));
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                filter: blur(2px);
+                box-shadow: 0 0 80px rgb(175, 50, 4);
+                animation: around 4s ease-in-out 2s infinite alternate;
+                
+
+            }
+        form{
+            width: 300px;
+            height: 400px;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px auto;
+            
+            box-shadow: 2px 2px 5px rgb(31, 28, 33);
+            border: 1px solid rgb(78, 76, 76);
+            color: beige;
+            z-index: 4;
+            backdrop-filter: blur(15px);
+            animation: circlel 2s ease-in-out 0.5s 1 alternate;
+            
+
+            }
+            
+            .leb{
+                display: block;
+                font-size: 25px;
+               
+            }
+            .put{
+                margin: 20px auto;
+                 width: 100%;
+                height: 30px;
+                background-color: rgba(222, 227, 231,0.09);
+            }
+            h1{
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            
+            @keyframes circlel{
+                0%
+                {   opacity: 0;
+                    transform: translatey(100px) scaleX(0.08) rotate(45deg);
+                }
+                100%
+                {   opacity: 1;
+                    transform:translatey(0px) ;
+                }
+            }
+            @keyframes around{
+                0%
+                {
+                    transform: rotate(0deg) scale(0.8);
+                }
+                100%
+                {
+                    transform:rotate(360deg)scale(0.2) ;
+                }
+            }
+                
+
+                
+                
+            
+
+    
+            
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <div class="ship"> </div>
+        <div class="shit"></div>
+        <form action="#">
+            <h1>Login Here</h1>
+
+            <label for=" name" class="leb"> Username</label>
+            <input type="text" class="put" id="name" name="user" placeholder="Email or Phone">
+            <label for="pass" class="leb">Password</label>
+            <input type="password" class="put" id="pass" placeholder="password">
+            <button type="submit" class="put"> Log in</button>
+        </form>
+    </div>
+
+</body>
+</html>
